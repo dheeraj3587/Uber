@@ -5,7 +5,7 @@ const app=express();
 const cors=require("cors");
 app.use(cors());
 const connectToDB=require("./db/db");
-
+const userRoutes=require("./routes/user.routes");
 connectToDB().then(()=>{
     console.log("Connected to DB");
 }).catch((error)=>{
@@ -14,6 +14,10 @@ connectToDB().then(()=>{
 app.get("/",(req,res)=>{
     res.send("Hello World");
 });
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+app.use('/users',userRoutes);
 
 
 module.exports=app;
