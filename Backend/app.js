@@ -1,8 +1,10 @@
 const dotevn=require("dotenv");
+const cookieParser=require("cookie-parser");
 dotevn.config();
 const express=require("express");
 const app=express();
 const cors=require("cors");
+app.use(cookieParser());
 app.use(cors());
 const connectToDB=require("./db/db");
 const userRoutes=require("./routes/user.routes");
