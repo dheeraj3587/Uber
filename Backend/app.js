@@ -8,6 +8,7 @@ app.use(cookieParser());
 app.use(cors());
 const connectToDB=require("./db/db");
 const userRoutes=require("./routes/user.routes");
+const captainRoutes=require("./routes/captain.routes");
 connectToDB().then(()=>{
     console.log("Connected to DB");
 }).catch((error)=>{
@@ -20,6 +21,5 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use('/users',userRoutes);
-
-
+app.use('/captain',captainRoutes);
 module.exports=app;
