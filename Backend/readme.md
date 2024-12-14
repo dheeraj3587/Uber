@@ -367,6 +367,32 @@ Retrieves the profile of the authenticated captain.
 }
 ```
 
+### `POST /captain/logout`
+
+#### 🔑 Authentication
+- Requires JWT token in the `Authorization` header.
+
+#### 📄 Description
+Logs out the authenticated captain by blacklisting the provided JWT token.
+
+#### 📤 Success Response
+- **Status Code**: `200 OK`
+- **Body**:
+```json
+{
+  "message": "Successfully logged out"
+}
+```
+
+#### ⚠️ Error Responses
+- **Status Code**: `401 Unauthorized`
+- **Body**:
+```json
+{
+  "message": "Unauthorized"
+}
+```
+
 ### 🧪 How to Test Captain Routes Using Postman
 
 1. **Register a Captain**:
@@ -384,6 +410,12 @@ Retrieves the profile of the authenticated captain.
 3. **Get Captain Profile**:
    - **Method**: GET
    - **URL**: `http://localhost:3000/captain/profile`
+   - **Headers**: Add `Authorization: Bearer jwt_token`.
+   - **Send** the request and verify the response.
+
+4. **Captain Logout**:
+   - **Method**: POST
+   - **URL**: `http://localhost:3000/captain/logout`
    - **Headers**: Add `Authorization: Bearer jwt_token`.
    - **Send** the request and verify the response.
 
