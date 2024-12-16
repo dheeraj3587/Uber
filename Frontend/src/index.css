@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Uber-Move-Text';
+    src: url('../assets/fonts/UberMoveMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Uber-Move-Text';
+    src: url('../assets/fonts/UberMoveBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  

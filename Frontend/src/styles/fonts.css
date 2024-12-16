@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Uber-Move-Text';
+  src: url('../assets/fonts/UberMoveMedium.otf') format('opentype');
+  font-weight: 400; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uber-Move-Text';
+  src: url('../assets/fonts/UberMoveBold.otf') format('opentype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+body {
+  font-family: 'Uber-Move-Text', sans-serif;
+}
