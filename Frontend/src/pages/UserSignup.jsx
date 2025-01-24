@@ -35,6 +35,7 @@ const UserSignup = () => {
       if(response.status === 201){
         const data = response.data;
         setUser(data.user);
+        localStorage.setItem('token',response.data.token);
         navigate('/home');
       }
     }catch (err) {
